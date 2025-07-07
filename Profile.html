@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+    * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 10% 30%;
+  border: 3px solid;
+  border-radius: 20px;
+  box-shadow: 0px 0px 35px 0px black;
+  background-color: white;
+  color: black;
+}
+
+.container {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  margin: .5rem;
+}
+.iconheader {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  font-size: 1.8rem;
+  margin-bottom: -30px;
+}
+
+.fa-regular {
+  margin-right: 15px;
+}
+
+.fotodiri img {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.fotodiri img:hover {
+  width: 220px;
+  height: 220px;
+}
+.nama {
+  font-size: 18px;
+  padding-bottom: 15px;
+}
+
+.deskripsi {
+  padding: 0 50px 15px 50px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.tombol {
+  padding-bottom: 30px;
+}
+.tombol button {
+  color: white;
+  border: 3px solid white;
+  font-weight: bolder;
+  padding: 15px;
+  margin: 10px 40px;
+  font-size: 15px;
+  font-weight: 700;
+  width: 150px;
+  border-radius: 12px;
+  background: transparent;
+}
+
+.tombol button:hover {
+  font-size: 18px;
+  padding: 18px;
+  margin: 12px 40px;
+  width: 170px;
+  background-color: #8338ec;
+}
+.tombol button:hover {
+    color: white;
+}
+.sosmed .tiktok{
+    width: 75px;
+
+}
+.sosmed img {
+    padding: 0 10px;
+    width: 65px;
+}
+.sosmed img:hover {
+    width: 75px;
+}
+.sosmed .tiktok:hover {
+    width: 90px;
+}
+#btn-keluar {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 1.5rem;
+  color: black;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+    <table>
+        <div class="container">
+            <div class="iconheader">
+                <li>
+                    <i class="fa-solid fa-arrow-left" id="btn-keluar" ></i>
+                </li>
+               
+            </div>
+            <div class="fotodiri">
+                <img src="sparkle.jpg" alt="ptofile">
+            </div>
+            <div class="nama">
+                <h2>Tiko.A</h2>
+            </div>
+            <div class="deskripsi">
+                <p>Halo, Perkenalkan saya Tiko.A. saya mahasiswa teknik komputer, 
+                    dari smkn 1 pedan semester 1. saya tertarik dalam pembuatan web development
+                </p>
+            </div>
+            <div class="tombol">
+                <i class="fa-brands fa-tiktok"></i>
+                <i class="fa-brands fa-youtube" style="color: red;"></i>
+                <i class="fa-brands fa-whatsapp" style="color: green;"></i>
+            </div>
+        </div>
+    </table>
+    <script src="balik.js"></script>
+</body>
+</html>

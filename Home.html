@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        body {
+            background-color: white;
+        }
+        .judul {
+            font-size: 35px;
+            color: black;
+            text-align: center;
+        }
+
+        .gambar {
+            text-align: center;
+
+        }
+
+        .gambar img{
+            width: 700px;
+            margin-top: 35px;
+            box-shadow: 15px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .Tentang .Tentang2{
+            margin: 25px;
+            padding-right: 40px;
+            padding-left: 40px;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px 20px;
+            color: white;
+            z-index: 1000;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 800px;
+            overflow: hidden;
+            margin: auto;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .slider img {
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        button.prev, button.next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        button.prev {
+            left: 0;
+        }
+
+        button.next {
+            right: 0;
+        }
+
+        .System h4 {
+            padding-left: 80px;
+            padding-right: 20px;
+            margin: 20px;
+        }
+
+        .download-btn {
+            padding: 12px 24px;
+            background-color: blue;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0,3s, transform 0,2s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .download-btn:hover {
+            background-color: red;
+            transform: scale(1.05);
+        }
+        .download-btn:active {
+            background-color: #3e8e41;
+            transform: scale(0.98);
+        }
+        .bawah {
+            background-color: black;
+            padding: 100px;
+            margin-top: 50px;
+        }
+        .icon {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" style="font-size:20px;">U N I T Y</a>
+                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tentang</a>
+                    </li>
+                </ul>
+            <a class="navbar-brand" href="Profile.html">
+                <img src="sparkle.jpg" alt="Logo profile" style="width: 40px;" class="rounded-pill">
+            </a>
+        </div>
+    </nav>  
+    <h2 class="judul" data-aos="fade-up" data-aos-duration="900"  style="margin-top: 30px; padding-top: 60px;">Life Survival 3D</h2>
+    <div class="gambar" data-aos="fade-up" data-aos-duration="1000">
+        <img src="Life judul.png" alt="LifeSurvival" >
+    </div>     
+    <div class="Tentang" data-aos="fade-up" data-aos-duration="900" >
+        <h4>🧭 Story Background:</h4>
+        <p>You are a young man (or gender can be chosen) who feels bored with the modern world. Living in a big city with a busy schedule, noisy sounds, gadget screens, and social pressures makes you slowly lose your way.
+
+Until finally, you make a big decision: go far away. Without a definite destination, you sail in a small boat, following the direction of the wind and the sea.
+
+After days of sailing the ocean, a small storm pushes you towards a place that is not recorded on any map: a small, empty, peaceful, and beautiful island.</p> 
+<p>Your days are no longer dictated by a clock or a calendar. You learn to read time from the shadows cast by rocks, from the sound of the waves, from the scent of the air changing as dusk falls.
+
+The first day, you just walk, along the shoreline.
+
+The second day, you sleep under a boulder, curling yourself up in dry weeds.
+
+The third day, you start making a simple shelter, from rocks and sand that the sea breeze has made firm.
+
+You are in no hurry. You are not chased by anyone. You just want to learn to live, one day at a time.
+
+The island gives you nothing instantly. But it doesn’t reject you either. Nature is harsh but honest. You have to adapt—learn to catch fish with your own hands, collect rainwater in holes in the rocks, and find a shady place to sleep when the heat is scorching.
+
+But that’s where the beauty lies.</p>
+    </div>
+<div class="Tentang2" data-aos="fade-up" data-aos-duration="900">
+<h4>🏝️ Simple, But Meaningful</h4>
+<p>You don’t have a soft bed. But every night, you fall asleep to the soothing sound of the waves.
+
+You don’t have a lamp. But the moonlight is enough to illuminate your face as you gaze at the starry sky.
+
+You don’t have music. But the sound of the wind and the ripples of the water create a symphony far deeper than any of your favorite playlists.
+
+You realize that you don’t need much to live.
+
+Just clean air, simple food, a place to sit in silence, and a heart that is starting to calm down.
+
+Life on this island is slow. Very slow. But you don’t mind.
+
+In fact, for the first time, you notice things you used to miss:
+
+The shadows of clouds moving across the ocean
+
+The fading footprints of seagulls in the sand
+
+A small breeze that changes the direction of the grass
+
+You begin to love silence. You begin to understand the meaning of enough.
+
+And in that long silence, you begin to rediscover your true self—not the one the world dictates, but the one that grows slowly with time and nature.</p>
+    </div>
+    <div class="slider-container" data-aos="fade-up" data-aos-duration="900">
+        <div class="slider">
+            <img src="LifeSurvival 1.png" alt="gambar1">
+            <img src="Life 2.png" alt="gambar2">
+            <img src="LifeSurvival 3.png" alt="gambar3">
+        </div>
+        <button class="prev">&#10094</button>
+        <button class="next">&#10095</button>
+        <script src="gambar.js"></script>
+    </div>
+    
+    <div class="System" data-aos="fade-up" data-aos-duration="900" >
+        <h4>System requirement</h4>
+        <div class="spek">
+        <ul style="padding-left: 90px;">
+            <li>OS : windows (64bit) 7 or higher up to date</li>
+            <li>Processor : Intel core 7, 3.0GHz - AMD Athlon 64 x2 Dual core 6400+ 3.2GHz</li>
+            <li>Memory : 8 GB RAM</li>
+            <li>Graphics : 1024 mb video card</li>
+            <li>Storage : 10 GB available space</li>
+        </ul>
+    </div>
+    <div class="link" data-aos="fade-up" data-aos-duration="900">
+     <h5 style="color: red; text-align: center; margin: 20px;">Link download :</h5>
+     <div style="text-align: center; margin: 10px;">
+        <a href="https://www.mediafire.com/file/vq4rgy8rzrgm3v2/yuta.zip/file" download="LifeSurvival3D">
+            <button class="download-btn">Download</button>
+        </a>
+      </div>
+    </div>
+      <div class="bawah" data-aos="fade-up" data-aos-duration="900" >
+        <p style="color: white; text-align: center;">Thanks For you Support</p>
+        <p style="color: white; text-align: center;">follow me on</p>
+        <div class="icon">
+            <i class="fa-brands fa-tiktok me-3" style="color: white; "></i>
+            <i class="fa-brands fa-youtube me-3" style="color: red;"></i>
+            <i class="fa-brands fa-whatsapp" style="color: green;"></i>
+        </div>
+      </div>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
