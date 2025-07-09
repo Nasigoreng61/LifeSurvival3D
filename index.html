@@ -1,223 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Life Survival 3D</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <style>
-        body {
-            background-color: white;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Life Survival 3D</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    body {
+      background-color: white;
+      margin: 0;
+      padding: 0;
+    }
 
-        .judul {
-            font-size: 35px;
-            color: black;
-            text-align: center;
-            margin-top: 90px;
-        }
+    .judul {
+      font-size: 28px;
+      color: black;
+      text-align: center;
+      margin-top: 120px; /* Supaya tidak ketutupan navbar */
+      padding: 0 15px;
+    }
 
-        .gambar {
-            text-align: center;
-        }
+    .gambar {
+      text-align: center;
+    }
 
-        .gambar img {
-            width: 100%;
-            max-width: 700px;
-            margin-top: 35px;
-            box-shadow: 15px 15px rgba(0, 0, 0, 0.3);
-        }
+    .gambar img {
+      width: 100%;
+      max-width: 700px;
+      margin-top: 20px;
+      box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+    }
 
-        .Tentang,
-        .Tentang2 {
-            margin: 25px;
-            padding: 0 20px;
-        }
+    .Tentang,
+    .Tentang2 {
+      margin: 20px;
+      padding: 0 15px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
 
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #333;
-            padding: 10px 20px;
-            color: white;
-            z-index: 1000;
-        }
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      padding: 5px 15px;
+      color: white;
+      z-index: 1000;
+    }
 
-        .slider-container {
-            position: relative;
-            width: 100%;
-            max-width: 800px;
-            overflow: hidden;
-            margin: auto;
-        }
+    .slider-container {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      overflow: hidden;
+      margin: auto;
+    }
 
-        .slider {
-            display: flex;
-            transition: transform 0.4s ease-in-out;
-        }
+    .slider {
+      display: flex;
+      transition: transform 0.4s ease-in-out;
+    }
 
-        .slider img {
-            width: 100%;
-            flex-shrink: 0;
-        }
+    .slider img {
+      width: 100%;
+      flex-shrink: 0;
+    }
 
-        button.prev, button.next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0,0,0,0.5);
-            border: none;
-            color: white;
-            padding: 10px;
-            font-size: 24px;
-            cursor: pointer;
-            z-index: 1;
-        }
+    button.prev,
+    button.next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      padding: 10px;
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 1;
+    }
 
-        button.prev { left: 0; }
-        button.next { right: 0; }
+    button.prev { left: 0; }
+    button.next { right: 0; }
 
-        .System h4 {
-            padding-left: 20px;
-            padding-right: 20px;
-            margin: 20px 0;
-        }
+    .System h4 {
+      padding: 0 20px;
+      margin: 20px 0 10px;
+    }
 
-        .spek ul {
-            padding-left: 40px;
-        }
+    .spek ul {
+      padding-left: 40px;
+    }
 
-        .download-btn {
-            padding: 12px 24px;
-            background-color: blue;
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+    .download-btn {
+      padding: 10px 20px;
+      background-color: blue;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 
-        .download-btn:hover {
-            background-color: red;
-            transform: scale(1.05);
-        }
+    .download-btn:hover {
+      background-color: red;
+      transform: scale(1.05);
+    }
 
-        .download-btn:active {
-            background-color: #3e8e41;
-            transform: scale(0.98);
-        }
+    .download-btn:active {
+      background-color: #3e8e41;
+      transform: scale(0.98);
+    }
 
-        .bawah {
-            background-color: black;
-            padding: 60px 20px;
-            margin-top: 50px;
-        }
+    .bawah {
+      background-color: black;
+      padding: 60px 20px;
+      margin-top: 50px;
+    }
 
-        .icon {
-            text-align: center;
-        }
+    .icon {
+      text-align: center;
+    }
 
-        @media (max-width: 768px) {
-            .judul {
-                font-size: 24px;
-            }
-            .System h4,
-            .spek ul,
-            .Tentang,
-            .Tentang2 {
-                padding: 0 10px;
-            }
-        }
-    </style>
+    @media (max-width: 768px) {
+      .judul { font-size: 22px; }
+      .Tentang,
+      .Tentang2,
+      .System h4,
+      .spek ul { padding: 0 10px; }
+    }
+  </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <div class="container-fluid">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" style="font-size:20px;">U N I T Y</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-            </ul>
-            <a class="navbar-brand" href="Profile.html">
-                <img src="sparkle.jpg" alt="Logo profile" style="width: 40px;" class="rounded-pill">
-            </a>
-        </div>
-    </nav>
-
-    <h2 class="judul" data-aos="fade-up" data-aos-duration="900">Life Survival 3D</h2>
-
-    <div class="gambar" data-aos="fade-up" data-aos-duration="1000">
-        <img src="Life judul.png" alt="LifeSurvival">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" style="font-size:18px;">U N I T Y</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+      </ul>
+      <a class="navbar-brand" href="Profile.html">
+        <img src="sparkle.jpg" alt="Logo profile" style="width: 32px;" class="rounded-pill">
+      </a>
     </div>
+  </nav>
 
-    <div class="Tentang" data-aos="fade-up" data-aos-duration="900">
-        <h4>🧱 Story Background:</h4>
-        <p>...</p> <!-- Cerita tetap -->
+  <h2 class="judul" data-aos="fade-up" data-aos-duration="900">Life Survival 3D</h2>
+
+  <div class="gambar" data-aos="fade-up" data-aos-duration="1000">
+    <img src="Life judul.png" alt="LifeSurvival">
+  </div>
+
+  <div class="Tentang" data-aos="fade-up" data-aos-duration="900">
+    <h4>🧱 Story Background:</h4>
+    <p>You are a young man (or gender can be chosen) who feels bored with the modern world. Living in a big city with a busy schedule, noisy sounds, gadget screens, and social pressures makes you slowly lose your way.
+    Until finally, you make a big decision: go far away. Without a definite destination, you sail in a small boat, following the direction of the wind and the sea.
+    After days of sailing the ocean, a small storm pushes you towards a place that is not recorded on any map: a small, empty, peaceful, and beautiful island.</p>
+  </div>
+
+  <div class="Tentang2" data-aos="fade-up" data-aos-duration="900">
+    <h4>🏝️ Simple, But Meaningful</h4>
+    <p>You don’t have a soft bed. But every night, you fall asleep to the soothing sound of the waves. You don’t have a lamp. But the moonlight is enough to illuminate your face as you gaze at the starry sky. You don’t have music. But the sound of the wind and the ripples of the water create a symphony far deeper than any of your favorite playlists. You realize that you don’t need much to live.</p>
+  </div>
+
+  <div class="slider-container" data-aos="fade-up" data-aos-duration="900">
+    <div class="slider">
+      <img src="LifeSurvival 1.png" alt="gambar1">
+      <img src="Life 2.png" alt="gambar2">
+      <img src="LifeSurvival 3.png" alt="gambar3">
     </div>
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+    <script src="gambar.js"></script>
+  </div>
 
-    <div class="Tentang2" data-aos="fade-up" data-aos-duration="900">
-        <h4>🏝️ Simple, But Meaningful</h4>
-        <p>...</p> <!-- Cerita tetap -->
+  <div class="System" data-aos="fade-up" data-aos-duration="900">
+    <h4>System requirement</h4>
+    <div class="spek">
+      <ul>
+        <li>OS: Windows (64bit) 7 or higher</li>
+        <li>Processor: Intel Core i7 / AMD Athlon 64 x2 3.0 GHz</li>
+        <li>Memory: 8 GB RAM</li>
+        <li>Graphics: 1024 MB video card</li>
+        <li>Storage: 10 GB available space</li>
+      </ul>
     </div>
+  </div>
 
-    <div class="slider-container" data-aos="fade-up" data-aos-duration="900">
-        <div class="slider">
-            <img src="LifeSurvival 1.png" alt="gambar1">
-            <img src="Life 2.png" alt="gambar2">
-            <img src="LifeSurvival 3.png" alt="gambar3">
-        </div>
-        <button class="prev">&#10094;</button>
-        <button class="next">&#10095;</button>
-        <script src="gambar.js"></script>
+  <div class="link" data-aos="fade-up" data-aos-duration="900">
+    <h5 style="color: red; text-align: center; margin: 20px;">Link download :</h5>
+    <div style="text-align: center; margin: 10px;">
+      <a href="https://www.mediafire.com/file/vq4rgy8rzrgm3v2/yuta.zip/file" download="LifeSurvival3D">
+        <button class="download-btn">Download</button>
+      </a>
     </div>
+  </div>
 
-    <div class="System" data-aos="fade-up" data-aos-duration="900">
-        <h4>System requirement</h4>
-        <div class="spek">
-            <ul>
-                <li>OS: Windows (64bit) 7 or higher up to date</li>
-                <li>Processor: Intel Core i7, 3.0GHz - AMD Athlon 64 x2 Dual Core 6400+ 3.2GHz</li>
-                <li>Memory: 8 GB RAM</li>
-                <li>Graphics: 1024 MB video card</li>
-                <li>Storage: 10 GB available space</li>
-            </ul>
-        </div>
+  <div class="bawah" data-aos="fade-up" data-aos-duration="900">
+    <p style="color: white; text-align: center;">Thanks For your Support</p>
+    <p style="color: white; text-align: center;">Follow me on</p>
+    <div class="icon">
+      <i class="fa-brands fa-tiktok me-3" style="color: white;"></i>
+      <i class="fa-brands fa-youtube me-3" style="color: red;"></i>
+      <i class="fa-brands fa-whatsapp" style="color: green;"></i>
     </div>
+  </div>
 
-    <div class="link" data-aos="fade-up" data-aos-duration="900">
-        <h5 style="color: red; text-align: center; margin: 20px;">Link download :</h5>
-        <div style="text-align: center; margin: 10px;">
-            <a href="https://www.mediafire.com/file/vq4rgy8rzrgm3v2/yuta.zip/file" download="LifeSurvival3D">
-                <button class="download-btn">Download</button>
-            </a>
-        </div>
-    </div>
-
-    <div class="bawah" data-aos="fade-up" data-aos-duration="900">
-        <p style="color: white; text-align: center;">Thanks For your Support</p>
-        <p style="color: white; text-align: center;">Follow me on</p>
-        <div class="icon">
-            <i class="fa-brands fa-tiktok me-3" style="color: white;"></i>
-            <i class="fa-brands fa-youtube me-3" style="color: red;"></i>
-            <i class="fa-brands fa-whatsapp" style="color: green;"></i>
-        </div>
-    </div>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
